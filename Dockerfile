@@ -1,5 +1,7 @@
 FROM node:18
 COPY . .
 RUN npm install
-EXPOSE 8080
+ENV PORT=5000
+EXPOSE ${PORT}
 CMD [ "node", "entry.js" ]
+
